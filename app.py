@@ -28,7 +28,6 @@ st.markdown(
 # --------------------------
 @st.cache_data
 def load_data(path: str) -> pd.DataFrame:
-    # Your CSV has each row quoted – clean that first
     with open(path, "r", encoding="utf-8") as f:
         lines = [line.strip().strip('"') for line in f]
 
